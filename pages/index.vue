@@ -2,24 +2,29 @@
   <section class="container-fluid">
     <div class="row">
       <div class="col-sm">
-        <h1>CategoryList</h1>
+        <CategoryList></CategoryList>
       </div>
       <div class="col-sm">
-        <h1>TODO List</h1>
+        <TODOList></TODOList>
       </div>
       <div class="col-sm">
-        <h1>TODO Detail</h1>
+        <TODODetail></TODODetail>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import CategoryList from '~/components/CategoryList.vue'
+import TODOList from '~/components/TODOList.vue'
+import TODODetail from '~/components/TODODetail.vue'
 
 export default {
   components: {
-    AppLogo
+    CategoryList,
+    TODOList,
+    TODODetail
+
   }
 }
 </script>
