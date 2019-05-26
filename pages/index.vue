@@ -1,8 +1,8 @@
 <template>
   <section class="container-fluid">
     <div class="row">
-      <div class="col-sm-4">
-        <SectionHeader title="CategoryList"></SectionHeader>
+      <div class="col-sm-4 categoryListWrap">
+        <SectionHeader title="CategoryList" color="white"></SectionHeader>
         <CategoryList></CategoryList>
       </div>
       <div class="col-sm-4">
@@ -59,6 +59,10 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.categoryListWrap{
+  background-color: #414141;
 }
 </style>
 
