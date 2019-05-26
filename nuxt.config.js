@@ -36,9 +36,6 @@ module.exports = {
     }
   },
   /* module settings */
-  modules: [
-    'bootstrap-vue/nuxt',
-    'nuxt-fontawesome'
-  ]
+  modules: ['bootstrap-vue/nuxt']
 }
 
