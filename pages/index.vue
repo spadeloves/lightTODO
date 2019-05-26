@@ -41,7 +41,7 @@ export default {
         {
           category_id: 1,
           category_name: "Category1",
-          color:"#11ff11",
+          color:"#F96262",
           todos:[
             {
               title: "todo1-1",
@@ -58,7 +58,7 @@ export default {
         {
           category_id: 2,
           category_name: "Category2",
-          color:"#ffff11",
+          color:"#78D3CE",
           todos:[
             {
               title: "todo2-1",

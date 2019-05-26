@@ -4,7 +4,7 @@
 					<ul 
             v-for='(category,index) in todoData' :key='index'
             v-if="category.category_id == activeCategory">
-            {{category.category_name}}
+            <i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.category_name}}
             <b-list-group-item v-for='(todo,index) in category.todos' :key='index'>
 						  {{todo.title}}
 					  </b-list-group-item>
