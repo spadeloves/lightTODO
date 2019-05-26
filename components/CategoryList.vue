@@ -1,6 +1,51 @@
 <template>
-  <section class="container">
-    <h1>CategoryList</h1>
-  </section>
+	<div class="category_list_wrap">
+	    <b-row>
+				<b-col>
+					<ul>
+						<b-list-group-item 
+						v-on:click="setActive" 
+						v-for='(category,index) in categoryList' :key='index' 
+						:href="'#'+category.category_id" 
+						:data-categoryid="category.category_id" 
+						:active="active_id==category.category_id">
+						<i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.name}}
+					</b-list-group-item>
+				</ul>
+			</b-col>
+		</b-row>
+	</div>
 </template>
 
+<script>
+export default {
+  	name: 'CategoryList',
+  	data: function() {
+  		return {
+  			active_id:"none",
+		    categoryList: [
+		    	{
+			  		category_id: 1,
+			  		name: "Category1",
+			  		color:"#11ff11"
+				},
+				{
+			  		category_id: 2,
+			  		name: "Category2",
+			  		color:"#ff1143"
+				},
+		    ]
+		}
+	},
+	methods: {
+		//クリックされたCategoryを活性化する
+		setActive:function(event){
+			this.active_id = event.target.dataset.categoryid;
+		}
+	}
+}
+</script>
+
+<style>
+
+</style>
