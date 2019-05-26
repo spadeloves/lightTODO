@@ -1,22 +1,14 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        light_todo
-      </h1>
-      <h2 class="subtitle">
-        light todo app made with nuxt.js
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <h1>CategoryList</h1>
+      </div>
+      <div class="col-sm">
+        <h1>TODO List</h1>
+      </div>
+      <div class="col-sm">
+        <h1>TODO Detail</h1>
       </div>
     </div>
   </section>
