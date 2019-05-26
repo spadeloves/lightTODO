@@ -5,11 +5,11 @@
 					<ul>
 						<b-list-group-item 
 						v-on:click="setActive" 
-						v-for='(category,index) in categoryList' :key='index' 
+						v-for='(category,index) in todoData' :key='index' 
 						:href="'#'+category.category_id" 
 						:data-categoryid="category.category_id" 
 						:active="active_id==category.category_id">
-						<i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.name}}
+						<i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.category_name}}
 					</b-list-group-item>
 				</ul>
 			</b-col>
@@ -19,28 +19,19 @@
 
 <script>
 export default {
-  	name: 'CategoryList',
-  	data: function() {
-  		return {
-  			active_id:"none",
-		    categoryList: [
-		    	{
-			  		category_id: 1,
-			  		name: "Category1",
-			  		color:"#11ff11"
-				},
-				{
-			  		category_id: 2,
-			  		name: "Category2",
-			  		color:"#ff1143"
-				},
-		    ]
+	name: 'CategoryList',
+	data: function() {
+		return {
+			active_id:"none",
 		}
 	},
+	props:['todoData','activeCategory'],
 	methods: {
 		//クリックされたCategoryを活性化する
 		setActive:function(event){
+			console.log(this.todoData);
 			this.active_id = event.target.dataset.categoryid;
+			this.$emit('changeCategory', this.active_id);
 		}
 	}
 }
