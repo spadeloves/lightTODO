@@ -9,7 +9,7 @@
 						:href="'#'+category.category_id" 
 						:data-categoryid="category.category_id" 
 						:active="active_id==category.category_id">
-							{{category.name}}
+						<i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.name}}
 					</b-list-group-item>
 				</ul>
 			</b-col>
