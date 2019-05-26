@@ -1,33 +1,30 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        light_todo
-      </h1>
-      <h2 class="subtitle">
-        light todo app made with nuxt.js
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <CategoryList></CategoryList>
+      </div>
+      <div class="col-sm">
+        <TODOList></TODOList>
+      </div>
+      <div class="col-sm">
+        <TODODetail></TODODetail>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import CategoryList from '~/components/CategoryList.vue'
+import TODOList from '~/components/TODOList.vue'
+import TODODetail from '~/components/TODODetail.vue'
 
 export default {
   components: {
-    AppLogo
+    CategoryList,
+    TODOList,
+    TODODetail
+
   }
 }
 </script>

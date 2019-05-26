@@ -1567,6 +1567,23 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-vue@^2.0.0-rc.20:
+  version "2.0.0-rc.20"
+  resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-2.0.0-rc.20.tgz#3d1fcc90f0ac0c260bf75ae287fe6b2bc3b7e950"
+  integrity sha512-R6/RUmJjt0d/G8JywRhNCjmIzmh1xJD1eHxrYJL0zcpcydkGsqbszHUA8BBULpgk5AnGRwd+Jf3ML434X7Bkdg==
+  dependencies:
+    "@nuxt/opencollective" "^0.2.2"
+    bootstrap "^4.3.1"
+    core-js ">=2.6.5 <3.0.0"
+    popper.js "^1.15.0"
+    portal-vue "^2.1.4"
+    vue-functional-data-merge "^2.0.7"
+
+bootstrap@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+
 boxen@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/boxen/-/boxen-3.2.0.tgz#fbdff0de93636ab4450886b6ff45b92d098f45eb"
@@ -2188,7 +2205,7 @@ core-js-pure@3.1.2:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.1.2.tgz#62fc435f35b7374b9b782013cdcb2f97e9f6dffa"
   integrity sha512-5ckIdBF26B3ldK9PM177y2ZcATP2oweam9RskHSoqfZCrJ2As6wVg8zJ1zTriFsZf6clj/N1ThDFRGaomMsh9w==
 
-core-js@^2.6.5:
+"core-js@>=2.6.5 <3.0.0", core-js@^2.6.5:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.8.tgz#dc3a1e633a04267944e0cb850d3880f340248139"
   integrity sha512-RWlREFU74TEkdXzyl1bka66O3kYp8jeTXrvJZDzVVMH8AiHUSOFpL1yfhQJ+wHocAm1m+4971W1PPzfLuCv1vg==
@@ -5070,6 +5087,16 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
+popper.js@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
+  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
+
+portal-vue@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/portal-vue/-/portal-vue-2.1.4.tgz#1fc679d77e294dc8d026f1eb84aa467de11b392e"
+  integrity sha512-Mr2h+RvoOOGHS7N0E3QPP+UQMt1OhSjQ7eMSGTXqkLiO0AjGEDw2x4kzmHATsZfDqQumiaYSDRzlUP2By3lvsA==
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -7083,6 +7110,11 @@ vue-eslint-parser@^2.0.3:
     espree "^3.5.2"
     esquery "^1.0.0"
     lodash "^4.17.4"
+
+vue-functional-data-merge@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-2.0.7.tgz#bdee655181eacdcb1f96ce95a4cc14e75313d1da"
+  integrity sha512-pvLc+H+x2prwBj/uSEIITyxjz/7ZUVVK8uYbrYMmhDvMXnzh9OvQvVEwcOSBQjsubd4Eq41/CSJaWzy4hemMNQ==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
