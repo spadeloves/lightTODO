@@ -1,20 +1,28 @@
 <template>
-    <b-row>
-		<b-col>
-			<ul>
-				<li v-for='(category,index) in categoryList' :key='index'>
-					{{category.name}}
-				</li>
-			</ul>
-		</b-col>
-	</b-row>
+	<div class="category_list_wrap">
+	    <b-row>
+				<b-col>
+					<ul>
+						<b-list-group-item 
+						v-on:click="setActive" 
+						v-for='(category,index) in categoryList' :key='index' 
+						:href="'#'+category.category_id" 
+						:data-categoryid="category.category_id" 
+						:active="active_id==category.category_id">
+							{{category.name}}
+					</b-list-group-item>
+				</ul>
+			</b-col>
+		</b-row>
+	</div>
 </template>
 
 <script>
 export default {
   	name: 'CategoryList',
   	data: function() {
-  		return {	
+  		return {
+  			active_id:"none",
 		    categoryList: [
 		    	{
 			  		category_id: 1,
@@ -28,6 +36,16 @@ export default {
 				},
 		    ]
 		}
+	},
+	methods: {
+		//クリックされたCategoryを活性化する
+		setActive:function(event){
+			this.active_id = event.target.dataset.categoryid;
+		}
 	}
 }
 </script>
+
+<style>
+
+</style>
