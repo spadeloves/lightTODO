@@ -1,13 +1,14 @@
 <template>
   <section class="container-fluid">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm-4">
+        <SectionHeader title="CategoryList"></SectionHeader>
         <CategoryList></CategoryList>
       </div>
-      <div class="col-sm">
+      <div class="col-sm-4">
         <TODOList></TODOList>
       </div>
-      <div class="col-sm">
+      <div class="col-sm-4">
         <TODODetail></TODODetail>
       </div>
     </div>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import SectionHeader from '~/components/SectionHeader.vue'
 import CategoryList from '~/components/CategoryList.vue'
 import TODOList from '~/components/TODOList.vue'
 import TODODetail from '~/components/TODODetail.vue'
@@ -23,8 +25,8 @@ export default {
   components: {
     CategoryList,
     TODOList,
-    TODODetail
-
+    TODODetail,
+    SectionHeader
   }
 }
 </script>
