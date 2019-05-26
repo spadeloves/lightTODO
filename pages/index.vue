@@ -43,7 +43,7 @@ export default {
   data:function(){
     return {
       activeCategory:1,
-      activeTODO:"0",
+      activeTODO:0,
       todoData: [
         {
           category_id: 1,
