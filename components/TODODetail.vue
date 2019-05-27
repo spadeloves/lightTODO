@@ -1,7 +1,9 @@
 <template>
   <section>
     <b-row>
-      <h2>{{todoData[activeCategory-1].todos[activeTodo].title}}</h2>
+      <b-col>
+        <h2>{{todoData[activeCategory-1].todos[activeTodo].title}}</h2>
+      </b-col>
     </b-row>
     <b-row>
       <b-col>
