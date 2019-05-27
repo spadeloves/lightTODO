@@ -2,7 +2,11 @@
   <section>
     <b-row>
       <b-col>
-        <h2>{{todoData[activeCategory-1].todos[activeTodo].title}}</h2>
+        <h2>  
+          <i class="far fa-check-square" v-if='todoData[activeCategory-1].todos[activeTodo].is_completed'></i>
+          <i class="far fa-square" v-else></i>
+          {{todoData[activeCategory-1].todos[activeTodo].title}}
+        </h2>
       </b-col>
     </b-row>
     <b-row>
