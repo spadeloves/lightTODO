@@ -29,7 +29,6 @@ export default {
 	methods: {
 		//クリックされたCategoryを活性化する
 		setActive:function(event){
-			console.log(this.todoData);
 			this.active_id = event.target.dataset.categoryid;
 			this.$emit('changeCategory', this.active_id);
 		}
