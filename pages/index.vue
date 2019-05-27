@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import SectionHeader from '~/components/SectionHeader.vue'
-import CategoryList from '~/components/CategoryList.vue'
-import TODOList from '~/components/TODOList.vue'
-import TODODetail from '~/components/TODODetail.vue'
+import SectionHeader from '~/components/parts/SectionHeader.vue'
+import CategoryList from '~/components/functions/CategoryList.vue'
+import TODOList from '~/components/functions/TODOList.vue'
+import TODODetail from '~/components/functions/TODODetail.vue'
 
 export default {
   components: {
@@ -54,6 +54,7 @@ export default {
               title: "洗濯する",
               note: "洗濯して、干す。今かかってる洗濯物をたたむ。",
               deadline: "2019/06/01",
+              is_completed:true,
               comments:[
                 {
                   date:"2019/05/26 13:13",
@@ -69,6 +70,7 @@ export default {
               title: "料理作る",
               note: "スパゲッティつくる。カルボナーラの予定",
               deadline: "2019/06/01",
+              is_completed:false,
               comments:[
                 {
                   date:"2019/05/28 12:54",
@@ -87,6 +89,7 @@ export default {
               title: "資料作る",
               note: "〇〇商社のプレゼン用。上司チェック必須。",
               deadline: "2019/06/21",
+              is_completed:true,
               comments:[
                 {
                   date:"2019/05/28 15:42",
@@ -102,6 +105,7 @@ export default {
               title: "メールする",
               note: "〇〇さんの進捗報告メールの確認、返信。",
               deadline: "2019/06/23",
+              is_completed:false,
               comments:[
               ]
             },
@@ -109,6 +113,7 @@ export default {
               title: "週報出す",
               note: "週報テンプレート Document¥personal¥template.md",
               deadline: "2019/06/23",
+              is_completed:false,
               comments:[
                 {
                   date:"2019/06/19",
