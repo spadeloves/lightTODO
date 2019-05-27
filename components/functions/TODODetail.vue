@@ -3,8 +3,11 @@
     <b-row>
       <b-col>
         <h2>  
-          <i class="far fa-check-square" v-if='todoData[activeCategory-1].todos[activeTodo].is_completed'></i>
-          <i class="far fa-square" v-else></i>
+          <TODOCheckbox 
+          :todo-id="todoData[activeCategory-1].todos[activeTodo]"
+          :category-id="activeCategory-1"
+          :todo-is-completed="todoData[activeCategory-1].todos[activeTodo].is_completed"
+          ></TODOCheckbox>
           {{todoData[activeCategory-1].todos[activeTodo].title}}
         </h2>
       </b-col>
@@ -44,7 +47,12 @@
 
 
 <script>
+import TODOCheckbox from '~/components/parts/TODOCheckbox.vue'
+
 export default {
+  components: {
+    TODOCheckbox,
+  },
   name: 'TODODetail',
   props:['todoData','activeTodo','activeCategory','selectedTODO','categoryName'],
   methods: {
