@@ -23,6 +23,7 @@ import CategoryList from '~/components/functions/CategoryList.vue'
 import TODOList from '~/components/functions/TODOList.vue'
 import TODODetail from '~/components/functions/TODODetail.vue'
 
+
 export default {
   components: {
     CategoryList,
