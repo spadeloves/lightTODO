@@ -4,7 +4,7 @@
       <b-col>
         <h2>  
           <TODOCheckbox 
-          :todo-id="todoData[activeCategory-1].todos[activeTodo]"
+          :todo-id="activeTodo"
           :category-id="activeCategory-1"
           :todo-is-completed="todoData[activeCategory-1].todos[activeTodo].is_completed"
           ></TODOCheckbox>
