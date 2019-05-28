@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 import SectionHeader from '~/components/parts/SectionHeader.vue'
 import CategoryList from '~/components/functions/CategoryList.vue'
 import TODOList from '~/components/functions/TODOList.vue'
