@@ -86,18 +86,18 @@ export const state = () => ({
 // 状態を変更する処理は mutationとしてexportする
 export const mutations = {
   // ここでは todoData の状態（値）を変更する処理を定義
-  setTodoFromStore(state, value) {
-    state.todoData = value
+  setTodoStatusFromStore(state,todoInfo) {
+    console.log(todoInfo.category_id)
+    console.log(todoInfo.todo_id)
+    state.todoData[todoInfo.category_id].todos[todoInfo.todo_id].is_completed = !state.todoData[todoInfo.category_id].todos[todoInfo.todo_id].is_completed
+    console.log(state.todoData)
   },
 }
 
+
 // 実際に各コンポーネントから呼び出す処理をactionとしてexportする
 export const actions = {
-  writeHoge(context, value) {
-    // コミットすることで状態変更が反映される
-    context.commit('setTodoFromStore', value)
-  },
-  vuexTest(){   
-    alert("hogehoge")
+  toggleTaskStatus(context,todoInfo){
+    context.commit('setTodoStatusFromStore',todoInfo)
   }
 }

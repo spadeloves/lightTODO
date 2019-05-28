@@ -1,6 +1,6 @@
 <template>
-	<i class="far fa-check-square" v-if='todoIsCompleted' v-on:click="changeTODOStatus(false)"></i>
-    <i class="far fa-square" v-on:click="changeTODOStatus(true)" v-else></i>
+	<i class="far fa-check-square" v-if='todoIsCompleted' v-on:click="$store.dispatch('todos/toggleTaskStatus',{category_id:categoryId,todo_id:todoId})"></i>
+    <i class="far fa-square" v-on:click="$store.dispatch('todos/toggleTaskStatus',{category_id:categoryId,todo_id:todoId})" v-else></i>
 </template>
 
 <script>
