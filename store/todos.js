@@ -1,6 +1,11 @@
 // 状態管理したい要素に名前をつけて、stateとしてexportする
 export const state = () => ({
-  // 'todoData' という名前の状態を管理する
+  // //選択されているカテゴリ
+  activeCategory:1,
+  //選択されているタスク（Index）
+  activeTODO:0, 
+  // タスクデータ
+  // TODO: 動的に読み込むようにする
   todoData: [
     {
       category_id: 1,
@@ -87,11 +92,12 @@ export const state = () => ({
 export const mutations = {
   // ここでは todoData の状態（値）を変更する処理を定義
   setTodoStatusFromStore(state,todoInfo) {
-    console.log(todoInfo.category_id)
-    console.log(todoInfo.todo_id)
     state.todoData[todoInfo.category_id].todos[todoInfo.todo_id].is_completed = !state.todoData[todoInfo.category_id].todos[todoInfo.todo_id].is_completed
-    console.log(state.todoData)
   },
+  // 選択されているカテゴリID の状態（値）を変更する処理を定義
+  setAcrtiveCategoryFromStore(state,category_id) {
+    state.activeCategory= category_id
+  }
 }
 
 
@@ -99,5 +105,8 @@ export const mutations = {
 export const actions = {
   toggleTaskStatus(context,todoInfo){
     context.commit('setTodoStatusFromStore',todoInfo)
-  }
+  },
+  setActiveCategory(context,category_id){
+    context.commit('setAcrtiveCategoryFromStore',category_id)
+  },
 }
