@@ -35,7 +35,6 @@ export default {
   props:['activeCategory','activeTodo'],
   methods: {
     setActiveTODO:function(event){
-      console.log(event);
       this.$store.dispatch('todos/setActiveTask', event.currentTarget.dataset.todoid)
     }
   },
