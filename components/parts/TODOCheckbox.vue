@@ -9,9 +9,7 @@ export default {
   props:['todoId','categoryId','todoIsCompleted'],
   methods: {
   	changeTODOStatus:function(status){
-  		console.log(this.todoIsCompleted);
   		this.todoIsCompleted = status;
-  		console.log(this.todoIsCompleted);
   	}
   },
 }

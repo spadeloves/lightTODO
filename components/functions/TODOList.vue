@@ -3,7 +3,7 @@
 				<b-col>
 					<ul 
             v-for='(category,cat_index) in $store.state.todos.todoData' :key='cat_index'
-            v-if="category.category_id == activeCategory">
+            v-if="category.category_id == $store.state.todos.activeCategory">
             <i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.category_name}}
             <b-list-group-item v-for='(todo,index) in category.todos' :key='index'
             :data-todoid="index" 

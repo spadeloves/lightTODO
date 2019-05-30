@@ -29,8 +29,9 @@ export default {
 	methods: {
 		//クリックされたCategoryを活性化する
 		setActive:function(event){
-			this.active_id = event.target.dataset.categoryid;
-			this.$emit('changeCategory', this.active_id);
+			// this.active_id = event.target.dataset.categoryid;
+			// this.$emit('changeCategory', this.active_id);
+			this.$store.dispatch('todos/setActiveCategory', event.target.dataset.categoryid)
 		}
 	}
 }
