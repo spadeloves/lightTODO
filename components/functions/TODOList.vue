@@ -36,7 +36,7 @@ export default {
   methods: {
     setActiveTODO:function(event){
       console.log(event);
-      this.$store.dispatch('todos/setActiveTask', event.target.dataset.todoid)
+      this.$store.dispatch('todos/setActiveTask', event.currentTarget.dataset.todoid)
     }
   },
 }
