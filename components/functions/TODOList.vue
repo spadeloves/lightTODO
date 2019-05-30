@@ -18,6 +18,7 @@
               {{todo.title}}
               <p class="float-right">{{todo.deadline}}</p>
 					  </b-list-group-item>
+            <TODOAddFormInList></TODOAddFormInList>
           </ul>
 			</b-col>
 		</b-row>
@@ -25,12 +26,14 @@
 
 
 <script>
+import TODOAddFormInList from '~/components/parts/TODOAddFormInList.vue'
 import TODOCheckbox from '~/components/parts/TODOCheckbox.vue'
 
 export default {
   name: 'TODOList',
   components: {
     TODOCheckbox,
+    TODOAddFormInList
   },
   props:['activeCategory','activeTodo'],
   methods: {
