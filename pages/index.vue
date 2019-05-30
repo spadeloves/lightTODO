@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-sm-3 categoryListWrap mainSection">
         <SectionHeader title="CategoryList" color="white"></SectionHeader>
-        <CategoryList  v-on:changeCategory="changeCategory"></CategoryList>
+        <CategoryList></CategoryList>
       </div>
       <div class="col-sm-4">
         <SectionHeader title="TODOList"  color="black"></SectionHeader>
-        <TODOList  :active-category="activeCategory" :active-todo="activeTODO" v-on:changeActiveTODO="changeActiveTODO"></TODOList>
+        <TODOList></TODOList>
       </div>
       <div class="col-sm-5">
         <SectionHeader title="TODODetail"  color="black"></SectionHeader>
-        <TODODetail  :active-category="activeCategory" :active-todo="activeTODO"></TODODetail>
+        <TODODetail></TODODetail>
       </div>
     </div>
   </section>

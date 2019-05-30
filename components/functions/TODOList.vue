@@ -9,7 +9,12 @@
             :data-todoid="index" 
             v-on:click="setActiveTODO"
             :href="'#'+(cat_index+1)+'-'+(index+1)" 
-            :active='activeTodo==index'>
+            :active='$store.state.todos.activeTODO==index'>
+              <TODOCheckbox 
+              :todo-id="index"
+              :category-id="$store.state.todos.activeCategory-1"
+              :todo-is-completed="$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos[index].is_completed"
+              ></TODOCheckbox>
               {{todo.title}}
               <p class="float-right">{{todo.deadline}}</p>
 					  </b-list-group-item>
@@ -20,13 +25,18 @@
 
 
 <script>
+import TODOCheckbox from '~/components/parts/TODOCheckbox.vue'
+
 export default {
   name: 'TODOList',
+  components: {
+    TODOCheckbox,
+  },
   props:['activeCategory','activeTodo'],
   methods: {
     setActiveTODO:function(event){
-      this.active_id = event.target.dataset.todoid;
-      this.$emit('changeActiveTODO',  event.target.dataset.todoid);
+      console.log(event);
+      this.$store.dispatch('todos/setActiveTask', event.target.dataset.todoid)
     }
   },
 }
