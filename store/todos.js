@@ -97,6 +97,10 @@ export const mutations = {
   // 選択されているカテゴリID の状態（値）を変更する処理を定義
   setAcrtiveCategoryFromStore(state,category_id) {
     state.activeCategory= category_id
+  },
+  // 選択されているTodoID の状態（値）を変更する処理を定義
+  setAcrtiveTaskFromStore(state,todo_id) {
+    state.activeTODO= todo_id
   }
 }
 
@@ -108,5 +112,8 @@ export const actions = {
   },
   setActiveCategory(context,category_id){
     context.commit('setAcrtiveCategoryFromStore',category_id)
+  },
+  setActiveTask(context,todo_id){
+    context.commit('setAcrtiveTaskFromStore',todo_id)
   },
 }
