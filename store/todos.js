@@ -4,6 +4,8 @@ export const state = () => ({
   activeCategory:1,
   //選択されているタスク（Index）
   activeTODO:0, 
+  //タスク追加モードフラグ
+  isAddingTask:0, 
   // タスクデータ
   // TODO: 動的に読み込むようにする
   todoData: [
@@ -101,7 +103,11 @@ export const mutations = {
   // 選択されているTodoID の状態（値）を変更する処理を定義
   setAcrtiveTaskFromStore(state,todo_id) {
     state.activeTODO= todo_id
-  }
+  },
+  // タスク追加モードを変更する処理を定義
+  toggleTaskAddingMode(state) {
+    state.isAddingTask = !state.isAddingTask
+  },
 }
 
 
@@ -115,5 +121,8 @@ export const actions = {
   },
   setActiveTask(context,todo_id){
     context.commit('setAcrtiveTaskFromStore',todo_id)
+  },
+  toggleTaskForm(context){
+    context.commit('toggleTaskAddingMode')
   },
 }
