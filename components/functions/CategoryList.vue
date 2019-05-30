@@ -5,7 +5,7 @@
 					<ul>
 						<b-list-group-item 
 						v-on:click="setActive" 
-						v-for='(category,index) in todoData' :key='index' 
+						v-for='(category,index) in $store.state.todos.todoData' :key='index' 
 						:href="'#'+category.category_id" 
 						:data-categoryid="category.category_id" 
 						:active="active_id==category.category_id">
@@ -25,7 +25,7 @@ export default {
 			active_id:"none",
 		}
 	},
-	props:['todoData','activeCategory'],
+	props:['activeCategory'],
 	methods: {
 		//クリックされたCategoryを活性化する
 		setActive:function(event){

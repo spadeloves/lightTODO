@@ -2,7 +2,7 @@
     <b-row>
 				<b-col>
 					<ul 
-            v-for='(category,cat_index) in todoData' :key='cat_index'
+            v-for='(category,cat_index) in $store.state.todos.todoData' :key='cat_index'
             v-if="category.category_id == activeCategory">
             <i class="fas fa-circle" v-bind:style="{color:category.color}"></i> {{category.category_name}}
             <b-list-group-item v-for='(todo,index) in category.todos' :key='index'
@@ -22,7 +22,7 @@
 <script>
 export default {
   name: 'TODOList',
-  props:['todoData','activeCategory','activeTodo'],
+  props:['activeCategory','activeTodo'],
   methods: {
     setActiveTODO:function(event){
       this.active_id = event.target.dataset.todoid;
