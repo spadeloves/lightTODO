@@ -37,6 +37,11 @@ module.exports = {
     }
   },
   /* module settings */
-  modules: ['bootstrap-vue/nuxt']
+  modules: [
+    'bootstrap-vue/nuxt'
+  ],
+  plugins: [
+    { src: "~plugins/persistedstate.js", ssr: false }
+  ]
 }
 

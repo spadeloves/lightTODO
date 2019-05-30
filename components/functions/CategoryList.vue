@@ -25,6 +25,7 @@ export default {
 		//クリックされたCategoryを活性化する
 		setActive:function(event){
 			this.$store.dispatch('todos/setActiveCategory', event.target.dataset.categoryid)
+			this.$store.dispatch('todos/setActiveTask', 0)
 		}
 	}
 }
