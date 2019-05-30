@@ -8,6 +8,7 @@
       <div class="col-sm-4">
         <SectionHeader title="TODOList"  color="black"></SectionHeader>
         <TODOList></TODOList>
+        <AddTodoButton size="3" color="#4ba2ff"></AddTodoButton>
       </div>
       <div class="col-sm-5">
         <SectionHeader title="TODODetail"  color="black"></SectionHeader>
@@ -33,24 +34,6 @@ export default {
     TODODetail,
     SectionHeader
   },
-  methods: {
-    changeCategory:function(category_id){
-      this.activeCategory = category_id;
-      this.activeTODO = 0;
-
-    },
-    changeActiveTODO:function(todo_id){
-      this.activeTODO = todo_id;
-    }
-  },
-  data:function(){
-    return {
-      //選択されているカテゴリ
-      activeCategory:1,
-      //選択されているタスク（Index）
-      activeTODO:0,
-		}
-  }
 }
 </script>
 

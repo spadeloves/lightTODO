@@ -41,7 +41,9 @@ module.exports = {
     'bootstrap-vue/nuxt'
   ],
   plugins: [
-    { src: "~plugins/persistedstate.js", ssr: false }
+    { src: "~plugins/persistedstate.js", ssr: false },
+    { src: "~plugins/ui.js" },
+
   ]
 }
 
