@@ -108,6 +108,10 @@ export const mutations = {
   toggleTaskAddingMode(state) {
     state.isAddingTask = !state.isAddingTask
   },
+  // タスクの追加
+  addTodo(state, todoData) {
+    state.todoData[todoData.category].todos.push(todoData)
+  },
 }
 
 
@@ -124,5 +128,8 @@ export const actions = {
   },
   toggleTaskForm(context){
     context.commit('toggleTaskAddingMode')
+  },
+  addTask(context, todoData) {
+    context.commit('addTodo',todoData)
   },
 }
