@@ -5,7 +5,9 @@
     	label="Category">
     	    <b-form-select v-model="todoData.category" name="category" class="mb-3">
     	    	<option :value=index v-for='(category,index) in $store.state.todos.todoData' :key='index'
-				:selected="$store.state.todos.activeCategory==index"
+				:selected="$store.state.todos.activeCategory == category.category_id"
+				:data-active="$store.state.todos.activeCategory"
+				:data-id="category.category_id"
 				>{{category.category_name}}</option>
     	    </b-form-select>
 	    </b-form-group>
@@ -18,8 +20,14 @@
 
 		<b-form-group
     	id="input-group-1"
+    	label="Memo">
+			<b-textarea v-model="todoData.note" type="text"></b-textarea>
+		</b-form-group>
+
+		<b-form-group
+    	id="input-group-1"
     	label="Deadline">
-		<datepicker bootstrap-styling="true" format="yyyy/MM/dd" v-model="todoData.deadline" ></datepicker>
+			<datepicker bootstrap-styling="true" format="yyyy/MM/dd" v-model="todoData.deadline" ></datepicker>
 		</b-form-group>
 
 
@@ -59,6 +67,7 @@ export default {
 
 			//Storeに保存
 			this.$store.dispatch('todos/addTask', this.todoData)
+			this.$store.dispatch("todos/toggleTaskForm")
 		}
   },
 }
