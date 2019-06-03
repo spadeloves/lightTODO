@@ -10,9 +10,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'light todo app made with nuxt.js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/lightTODO/favicon.ico' },
       { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css" }
     ]
+  },
+  generate: {
+    dir: "docs"
   },
   /*
   ** Customize the progress bar color
@@ -44,6 +47,9 @@ module.exports = {
     { src: "~plugins/persistedstate.js", ssr: false },
     { src: "~plugins/ui.js" },
 
-  ]
+  ],
+  router: {
+    base: '/lightTODO/'
+  }
 }
 
