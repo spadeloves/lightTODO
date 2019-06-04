@@ -3,9 +3,11 @@ export const state = () => ({
   // //選択されているカテゴリ
   activeCategory:1,
   //選択されているタスク（Index）
-  activeTODO:0, 
+  activeTODO:0,
   //タスク追加モードフラグ
-  isAddingTask:0, 
+  isAddingTask:0,
+  //カテゴリ追加モードフラグ
+  isAddingCategory:0,
   // タスクデータ
   // TODO: 動的に読み込むようにする
   todoData: [
@@ -87,6 +89,12 @@ export const state = () => ({
         },
       ]
     },
+    {
+      category_id: 3,
+      category_name: "映画",
+      color:"#FF23D3",
+      todos:[]
+    },
   ]
 })
 
@@ -108,9 +116,17 @@ export const mutations = {
   toggleTaskAddingMode(state) {
     state.isAddingTask = !state.isAddingTask
   },
+  // カテゴリ追加モードを変更する処理を定義
+  toggleCategoryAddingMode(state) {
+    state.isAddingCategory = !state.isAddingCategory
+  },
   // タスクの追加
   addTodo(state, todoData) {
     state.todoData[todoData.category].todos.push(todoData)
+  },
+  // タスクの追加
+  addCategory(state, categoryData) {
+    state.todoData.push(categoryData)
   },
 }
 
@@ -129,7 +145,13 @@ export const actions = {
   toggleTaskForm(context){
     context.commit('toggleTaskAddingMode')
   },
+  toggleCategoryForm(context){
+    context.commit('toggleCategoryAddingMode')
+  },
   addTask(context, todoData) {
     context.commit('addTodo',todoData)
+  },
+  addCategory(context, categoryData) {
+    context.commit('addCategory',categoryData)
   },
 }
