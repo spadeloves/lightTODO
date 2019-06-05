@@ -89,12 +89,12 @@ export const state = () => ({
         },
       ]
     },
-    {
-      category_id: 3,
-      category_name: "映画",
-      color:"#FF23D3",
-      todos:[]
-    },
+    // {
+    //   category_id: 3,
+    //   category_name: "映画",
+    //   color:"#FF23D3",
+    //   todos:[]
+    // },
   ]
 })
 
@@ -124,8 +124,9 @@ export const mutations = {
   addTodo(state, todoData) {
     state.todoData[todoData.category].todos.push(todoData)
   },
-  // タスクの追加
+  // カテゴリの追加
   addCategory(state, categoryData) {
+    categoryData.category_id = state.todoData.length + 1
     state.todoData.push(categoryData)
   },
 }
