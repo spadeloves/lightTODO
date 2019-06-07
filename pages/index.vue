@@ -13,7 +13,8 @@
       </div>
       <div class="col-sm-5">
         <SectionHeader title="TODODetail"  color="black"></SectionHeader>
-        <TODODetail></TODODetail>
+        <TODODetail v-if="$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos.length"></TODODetail>
+        <p v-else>Just Empty</p>
       </div>
     </div>
   </section>

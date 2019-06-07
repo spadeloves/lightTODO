@@ -18,7 +18,9 @@
               {{todo.title}}
               <p class="float-right">{{todo.deadline}}</p>
 					  </b-list-group-item>
-            <TODOAddFormInList></TODOAddFormInList>
+          </ul>
+          <ul>
+              <TODOAddFormInList></TODOAddFormInList>
           </ul>
 			</b-col>
 		</b-row>
