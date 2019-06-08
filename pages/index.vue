@@ -4,15 +4,17 @@
       <div class="col-sm-3 categoryListWrap mainSection">
         <SectionHeader title="CategoryList" color="white"></SectionHeader>
         <CategoryList></CategoryList>
+        <AddToggleButton size="3" color="#4ba2ff" target="toggleCategoryForm"></AddToggleButton>
       </div>
       <div class="col-sm-4">
         <SectionHeader title="TODOList"  color="black"></SectionHeader>
         <TODOList></TODOList>
-        <AddTodoButton size="3" color="#4ba2ff"></AddTodoButton>
+        <AddToggleButton size="3" color="#4ba2ff" target="toggleTaskForm"></AddToggleButton>
       </div>
       <div class="col-sm-5">
         <SectionHeader title="TODODetail"  color="black"></SectionHeader>
-        <TODODetail></TODODetail>
+        <TODODetail v-if="$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos.length"></TODODetail>
+        <p v-else>Just Empty</p>
       </div>
     </div>
   </section>
@@ -42,4 +44,3 @@ export default {
   background-color: #414141;
 }
 </style>
-

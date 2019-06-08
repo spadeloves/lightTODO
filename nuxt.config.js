@@ -14,9 +14,6 @@ module.exports = {
       { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css" }
     ]
   },
-  generate: {
-    dir: "docs"
-  },
   /*
   ** Customize the progress bar color
   */
@@ -37,7 +34,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    assetsPublicPath: '',
   },
   /* module settings */
   modules: [
@@ -52,4 +50,3 @@ module.exports = {
     base: '/lightTODO/'
   }
 }
-

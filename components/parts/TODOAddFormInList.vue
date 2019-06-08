@@ -65,8 +65,18 @@ export default {
 			var moment = require('moment');
 			this.todoData.deadline = moment(this.todoData.deadline).format("YYYY/MM/DD")
 
+			let totoData = {
+				title:this.todoData.title,
+				category:this.todoData.category,
+				deadline:this.todoData.deadline,
+				is_completed:this.todoData.is_completed,
+				comments:this.todoData.comments,
+				deadline:this.todoData.deadline,
+				note:this.todoData.note,
+			}
+
 			//Storeに保存
-			this.$store.dispatch('todos/addTask', this.todoData)
+			this.$store.dispatch('todos/addTask', totoData)
 			this.$store.dispatch("todos/toggleTaskForm")
 		}
   },
