@@ -6,6 +6,7 @@
 						<b-list-group-item
 						v-on:click="setActive"
 						v-for='(category,index) in $store.state.todos.todoData' :key='index'
+						v-if="$store.state.todos.todoData.length"
 						:href="'#'+category.category_id"
 						:data-categoryid="category.category_id"
 						:active="$store.state.todos.activeCategory==category.category_id">

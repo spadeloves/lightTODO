@@ -11,10 +11,13 @@
         <TODOList></TODOList>
         <AddToggleButton size="3" color="#4ba2ff" target="toggleTaskForm"></AddToggleButton>
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-5" v-if="$store.state.todos.todoData.length">
         <SectionHeader title="TODODetail"  color="black"></SectionHeader>
         <TODODetail v-if="$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos.length"></TODODetail>
-        <p v-else>Just Empty</p>
+      </div>
+      <div class="col-sm-5" v-else>
+        <SectionHeader title="TODODetail"  color="black"></SectionHeader>
+        <p>Just Empty</p>
       </div>
     </div>
   </section>
