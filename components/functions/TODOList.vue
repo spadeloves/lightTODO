@@ -9,7 +9,8 @@
             :data-todoid="index"
             v-on:click="setActiveTODO"
             :href="'#'+(cat_index+1)+'-'+(index+1)"
-            :active='$store.state.todos.activeTODO==index'>
+            :active='$store.state.todos.activeTODO==index'
+            v-if="!$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos[index].is_completed">
               <TODOCheckbox
               :todo-id="index"
               :category-id="$store.state.todos.activeCategory-1"
