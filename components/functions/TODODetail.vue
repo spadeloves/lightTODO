@@ -42,16 +42,19 @@
         </b-list-group>
       </b-col>
     </b-row>
+    <AddCommentForm></AddCommentForm>
   </section>
 </template>
 
 
 <script>
 import TODOCheckbox from '~/components/parts/TODOCheckbox.vue'
+import AddCommentForm from '~/components/parts/AddCommentForm.vue'
 
 export default {
   components: {
     TODOCheckbox,
+    AddCommentForm,
   },
   name: 'TODODetail',
   methods: {

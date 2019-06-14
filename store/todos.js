@@ -44,6 +44,10 @@ export const mutations = {
     categoryData.category_id = state.todoData.length + 1
     state.todoData.push(categoryData)
   },
+  // カテゴリの追加
+  addComment(state, commentData) {
+    state.todoData[state.activeCategory-1].todos[state.activeTODO].comments.push(commentData)
+  },
 }
 
 
@@ -69,5 +73,8 @@ export const actions = {
   },
   addCategory(context, categoryData) {
     context.commit('addCategory',categoryData)
+  },
+  addComment(context, commentData) {
+    context.commit('addComment', commentData)
   },
 }
