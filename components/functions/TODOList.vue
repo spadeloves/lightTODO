@@ -16,7 +16,7 @@
               :todo-is-completed="$store.state.todos.todoData[$store.state.todos.activeCategory-1].todos[index].is_completed"
               ></TODOCheckbox>
               {{todo.title}}
-              <p class="float-right">{{todo.deadline}}</p>
+              <p class="float-right" v-if="todo.deadline != 'Invalid date'">{{todo.deadline}}</p>
 					  </b-list-group-item>
           </ul>
           <ul>

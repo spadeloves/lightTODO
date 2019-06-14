@@ -1,6 +1,6 @@
 <template>
   <section class="container-fluid">
-    <div class="row">
+    <div class="row" style="height:100vh">
       <div class="col-sm-3 categoryListWrap mainSection">
         <SectionHeader title="CategoryList" color="white"></SectionHeader>
         <CategoryList></CategoryList>
