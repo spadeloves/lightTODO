@@ -3,7 +3,7 @@
 		<b-form-group
     	id="input-group-1"
     	label="Category name">
-			<b-form-input v-model="categoryData.category_name" id="categoryName" name="name" type="name"></b-form-input>
+			<b-form-input v-model="categoryData.category_name" id="categoryName" name="name" type="text"></b-form-input>
 		</b-form-group>
 
 		<b-form-group
